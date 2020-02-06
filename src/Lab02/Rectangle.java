@@ -6,36 +6,42 @@ package Lab02;
  */
 public class Rectangle {
 
-    public double Width;
-    public double Height;
+    public double width;
+    public double height;
+    Measurement widthM;
+    Measurement heightM;
 
     public Rectangle(double w, double h) {
-        Width = w;
-        Height = h;
-        System.out.println("New Rectangle: " + Width + " by " + Height);
+        this.width = w;
+        this.height = h;
+        this.widthM = new Measurement(w, "unit(s)");
+        this.heightM = new Measurement(h, "unit(s)");
+        System.out.println("New Rectangle: " + width + " by " + height);
+
     }
 
     public double getWidth() {
-        return Width;
+        return width;
     }
 
     public double getHeight() {
-        return Height;
+        return height;
     }
 
     public double getArea() {
-        double area = Width * Height;
+        double area = width * height;
         return area;
     }
 
     public double getPerimeter() {
-        double perimeter = (Width + Height)*2;
+        double perimeter = (width + height) * 2;
         return perimeter;
     }
 
     @Override
     public String toString() {
-        String tostring = "Rectangle of " + Width + " by " + Height;
-        return tostring;
+        String s = widthM.toString() + " by " + heightM.toString();
+        return s;
     }
+
 }

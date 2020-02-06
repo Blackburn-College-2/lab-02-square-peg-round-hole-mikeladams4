@@ -6,17 +6,17 @@ package Lab02;
  */
 public class Square extends Rectangle {
 
-    public double Side;
-
+    public double side;
+    
     public Square(double s) {
         super(s, s);
-        Side = s;
-        System.out.println("New Square : " + Side);
+        this.side = s;
+        System.out.println("New Square : " + side);
     }
     
         @Override
     public String toString() {
-        String tostring = "Square of " + Side;
-        return tostring;
+        String s = widthM.toString() + " by " + heightM.toString();
+        return s;
     }
 }
